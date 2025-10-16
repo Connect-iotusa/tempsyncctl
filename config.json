@@ -1,0 +1,7 @@
+{
+  "site": "Embassy Row",
+  "units": 240,
+  "thermostats": 180,
+  "api_base": "https://api.connect-iot.ai/tempsync",
+  "api_token": "REPLACE_ME"
+}

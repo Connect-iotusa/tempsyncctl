@@ -1,0 +1,20 @@
+[project]
+name = "tempsyncctl"
+version = "0.1.0"
+description = "TempSync CLI for config summary/validation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["typer", "rich", "tabulate", "pydantic"]
+
+[project.scripts]
+tempsyncctl = "tempsyncctl.cli:app"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
