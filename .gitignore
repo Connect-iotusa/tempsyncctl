@@ -1,17 +1,18 @@
 ﻿# Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-.env
-.venv/
-.env.*.bak
+*.py[cod]
+*.egg-info/
+src/**/.egg-info/
 dist/
 build/
-*.egg-info/
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Env / tooling
+.venv/
+.env
+
 # IDE
 .vscode/
 .idea/
