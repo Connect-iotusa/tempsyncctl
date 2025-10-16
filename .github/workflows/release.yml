@@ -3,6 +3,9 @@ on:
   push:
     tags: ["v*"]
 
+permissions:
+  contents: write   # allow uploading assets
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,6 +17,8 @@ jobs:
           cache: pip
       - run: python -m pip install --upgrade pip build
       - run: python -m build .
+      - name: List artifacts (debug)
+        run: ls -al dist || dir dist
       - uses: softprops/action-gh-release@v2
         with:
           files: |
