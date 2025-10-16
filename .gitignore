@@ -3,12 +3,12 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+*.egg-info/
+src/**/.egg-info/
 .env
 .venv/
-.env.*.bak
 dist/
 build/
-*.egg-info/
 .pytest_cache/
 .coverage
 htmlcov/
