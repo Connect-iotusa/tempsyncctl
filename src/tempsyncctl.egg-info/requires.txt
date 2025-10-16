@@ -1,0 +1,4 @@
+typer
+rich
+tabulate
+pydantic
