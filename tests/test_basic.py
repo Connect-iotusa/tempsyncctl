@@ -7,7 +7,7 @@ def run_ok(cmd):
     return r.stdout
 
 def test_version_cmd():
-    out = run_ok(["tempsyncctl", "version"])
+    out = run_ok([sys.executable, "-m", "tempsyncctl.cli", "version"])
     assert "0.1.0" in out
 
 def test_validate_sample_ok(tmp_path):
@@ -20,5 +20,5 @@ def test_validate_sample_ok(tmp_path):
     }
     cfg = tmp_path / "config.json"
     cfg.write_text(json.dumps(sample))
-    out = run_ok(["tempsyncctl", "validate", "--path", str(cfg)])
+    out = run_ok([sys.executable, "-m", "tempsyncctl.cli", "validate", "--path", str(cfg)])
     assert "Config is valid" in out
